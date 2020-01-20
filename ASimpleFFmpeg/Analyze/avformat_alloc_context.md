@@ -1,0 +1,6 @@
+AVFormatContext是FFMpeg格式转换过程中实现输入和输出功能、保存相关数据的主要结构。
+每一个输入和输出文件，都在如下定义的指针数组全局变量中有对应的实体。
+其中负责申请一个AVFormatContext结构的内存,并进行简单初始化
+avformat_free_context()可以用来释放该结构里的所有东西以及该结构本身
+也是就说使用 avformat_alloc_context()分配的结构,需要使用avformat_free_context()来释放
+有些版本中函数名可能为: av_alloc_format_context();
